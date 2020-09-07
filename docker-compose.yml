@@ -1,14 +1,13 @@
 version: '3.7'
 services:
- mysql:
-  image: mysql:8.0.18
+  mysql:
+    image: mysql:8.0.18
 
-  ports:
+    ports:
        - '3306:3306'
-  volumes:
+    volumes:
        - ./data:/var/lib/mysql
-  environment:
-       - MYSQL_RANDOM_ROOT_PASSWORD=yes
-       - MYSQL_DATABASE=app
-       - MYSQL_USER=app
-       - MYSQL_PASSWORD=lolkek
+    environment:
+       - POSTGRES_DB=postgres
+       - PGPASSWORD=password
+       - POSTGRES_USER=
