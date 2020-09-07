@@ -1,13 +1,12 @@
 version: '3.7'
 services:
-  mysql:
-    image: mysql:8.0.18
-
+  postgres:
+    image: library/postgres:13-alpine
     ports:
-       - '3306:3306'
+       - '9999:9999'
     volumes:
-       - ./data:/var/lib/mysql
+       - ./pg_data:/var/lib/postgresql/data/pgdata
     environment:
        - POSTGRES_DB=postgres
        - PGPASSWORD=password
-       - POSTGRES_USER=
+       - POSTGRES_USER=app
