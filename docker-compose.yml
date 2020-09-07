@@ -8,5 +8,6 @@ services:
        - ./pg_data:/var/lib/postgresql/data/pgdata
     environment:
        - POSTGRES_DB=postgres
-       - PGPASSWORD=password
+       - POSTGRES_PASSWORD=password
        - POSTGRES_USER=app
+       - PGDATA=/var/lib/postgresql/data/db-files/
